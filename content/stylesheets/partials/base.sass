@@ -1,0 +1,124 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+!blueprint_grid_columns = 24
+!blueprint_container_size = 950px
+!blueprint_grid_margin  = 10px
+
+// Use this to calculate the width based on the total width.
+// Or you can set !blueprint_grid_width to a fixed value and unset !blueprint_container_size -- it will be calculated for you.
+!blueprint_grid_width   = (!blueprint_container_size + !blueprint_grid_margin) / !blueprint_grid_columns - !blueprint_grid_margin
+
+@import blueprint/modules/link_icons.sass
+@import compass/utilities/links.sass
+@import compass/utilities/lists/bullets.sass
+@import theme.sass
+@import border-radius.sass
+
+!header_font = "Helvetica", "Arial"
+!header_letter_spacing = -0.05em
+
+=header-font-style( !bold = true )
+  font-family= !header_font
+  letter-spacing= !header_letter_spacing
+  @if !bold
+    font-weight: bold
+
+!post_background = #f0f0f0
+// I used to use the colour below for .post h3
+!post_header_background = #eff
+
+!sandy = #e6e2af
+!stone = #a7a37e
+!beach = #efecca
+!ocean = #046380
+!diver = #002f2f
+
+.container
+  +container
+
+#header, #footer
+  +column(!blueprint_grid_columns)
+
+#sidebar
+  !sidebar_columns = 8
+  // true means it's the last column in the row
+  +column(!sidebar_columns, true)
+  ul.posts
+    margin-left: 0px
+    +no-bullets
+  a
+    +header-font-style
+    text-decoration: none
+
+#main
+  !content_columns = 16
+  +column(!content_columns)
+
+#header
+  a
+    text-decoration: none
+    border: none
+    color= !font_color
+    +header-font-style
+  #nav-bar
+    :font-size 1.5em
+    :line-height 1
+    :margin-bottom 1em
+    ul
+      width: 100%
+      margin-left: 0px
+      +no-bullets
+      background-color: #eff
+      li
+        display: inline
+        margin-right: 50px
+
+#lifestream
+  ul
+    margin-left: 0px
+    +no-bullets
+    li
+      display: inline
+      a
+        +header-font-style
+        text-decoration: none
+
+body.bp
+  //+showgrid("grid.png")
+  .post-date
+    +header-font-style(false)
+    +quiet
+  // This turns link icons on for all links.
+  //+link-icons
+  // Use this class if a link gets an icon when it shouldn't.
+  a.noicon
+    +no-link-icon
+  // Not all links have a url structure that can be detected,
+  // So you can set them explicitly yourself like so:
+  a.atom-feed
+    +link-icon("feed.png")
+  h1, h2, h3, h4, h5, h6
+    +header-font-style
+  .posts-list
+    margin-left: 0px
+    +no-bullets
+    a
+      +header-font-style
+      text-decoration: none
+  pre, code
+    font-family= !blueprint_fixed_font_family
+  pre
+    display: block
+    color: white
+    background: #222
+    padding-left: 0.6em
+    padding-right: 0.6em
+    +border-radius(5px)
+  p, li
+    code
+      background: #f0f0f0
+      border: 1px solid #e0e0e0
+      padding-left: 0.2em
+      padding-right: 0.2em
+      +border-radius(0.2em)

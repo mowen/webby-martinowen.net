@@ -1,0 +1,9 @@
+---
+layout: default
+filter: erb
+extension: html
+---
+<div class="post">
+  <h2><span class="post-date"><%= @page.date %></span>&nbsp;::&nbsp;<%= @page.title %></h2>
+  <%= @content %>
+</div>

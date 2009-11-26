@@ -1,0 +1,38 @@
+---
+title: Compass to the Rescue
+summary: How the Compass CSS "Meta-Framework" has taken the pain out of my stylesheets. Something for which I am eternally grateful.
+published: false
+layout: post
+date: 2009/10/25
+extension: html
+filter:
+  - textile
+---
+
+h3. CSS and Me
+
+For years I've been on the lookout for things that simplify the process of writing CSS, because as I'm a programmer, I "suck at it":http://www.betaversion.org/~stefano/linotype/news/169/. I've tried many times in the past to persevere with it, but I always end up going with a template lifted from the web, maybe with some minor tweaks.
+
+This is probably because I lack the tools, as like most non-designers, I don't want to fork out a Photoshop licence fee.
+
+h3. CSS for Programmers
+
+The first time I used "SASS":http://sass-lang.com/ I was a quite impressed, particularly with the ability to "define variables":http://sass-lang.com/#variables, as it meant that I wouldn't have to use Find and Replace every two minutes. But I still just saw it as an inferior offshoot of "HAML":http://haml-lang.com/. Now I think of it as the preprocessor that CSS has needed for so long.
+
+h4. Greater than the sum of its parts
+
+At the same time I was initially playing with HAML and SASS, I also came across "Blueprint":http://www.blueprintcss.org/ and thought that it was the answer to my CSS prayers. But after a while I realised that something was still missing.
+
+Compass calls itself a "Meta-Framework", a term I can't resist (we've reached the point where we have frameworks of frameworks, which makes me chuckle.) It combines the various CSS frameworks (Blueprint, Yahoo! UI, 960 Grid System) with SASS to create something that is much better than the sum of its parts.
+
+h4. Syntax
+
+My only complaint is that the syntax seems very unnatural, mixins (which you can think of as CSS macros) are prefixed with a "+" and variables are prefixed with a "!", which I don't like because it makes conditional statements look a little strange:
+
+<pre>
+@if !bold
+  font-weight: bold
+</pre>
+
+Which to me reads as "if bold is false, set the font-weight to bold" when in fact it means the opposite. A more standard variable prefix like "$" would have seemed more natural. But that's just me nit-picking. I love the project after all.
+

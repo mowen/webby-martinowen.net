@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+filter:
+  - erb
+  - basepath
+---
+<h2>Blog Posts</h2>
+<ul class="posts-list">
+  <% @pages.find(10, :in_directory => "posts", :sort_by => "date", :reverse => true).each do |post| %>
+  <li>
+    <span class="post-date"><%= post.date %></span> &raquo; <%= link_to(post.title, post.url) %>
+    <p class="post-summary"><%= post.summary %></p>
+  </li>
+  <% end %>
+</ul>
+

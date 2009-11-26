@@ -1,0 +1,26 @@
+---
+title: Playing with Mozilla Ubiquity
+summary: Getting to know Mozilla's impressive new Ubiquity Firefox extension, and my experiences of working on a command for it.
+published: false
+layout: post
+date: 2009/11/14
+extension: html
+filter:
+  - textile
+---
+I took a look at "Mozilla Ubiquity":https://mozillalabs.com/ubiquity/ recently, which is best described as an attempt at a natural language launcher for web services. It reminds me of the Mac launcher app "Quicksilver":http://en.wikipedia.org/wiki/Quicksilver_%28software%29. For example, if you type "weather liverpool" into it, you get the weather for Liverpool.
+
+I personally like this kind of thing because it means that I don't have to use the mouse.
+
+h3. The built-in commands
+
+Ubiquity comes with a number of built-in commands which I'm sure you can imagine:
+
+* @imdb star wars@ will take you to the Star Wars page on the IMDB.
+* @lookup gandhi@ will take you to the Gandhi entry of Wikipedia.
+* @tweet The text of a Tweet@ will post a Tweet.
+* @map 10 downing street london@ will get you a Google Map of the British Prime Minister's house.
+
+h3. Playing with a command
+
+Soon after installing Ubiquity and playing with the built-in commands, I found a BBC iPlayer command that needed upgrading to the latest language API. I found this to be quite difficult, because there isn't a great deal of support for debugging Ubiquity commands at the moment. All I found to help me was a utility function @CmdUtils.log()@ that allowed me to write debug messages to the console log in Firebug (and it only does that after you have turned on "Show Chrome Messages.")

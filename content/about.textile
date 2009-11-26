@@ -1,0 +1,19 @@
+---
+layout: default
+title: About
+extension: html
+filter:
+  - textile
+---
+h2. About
+
+I'm a software developer living in Liverpool in the United Kingdom.
+
+I'm interested in the following things:
+
+* Ruby
+* JavaScript
+* Emacs
+* .NET
+* Erlang
+* Arduino
