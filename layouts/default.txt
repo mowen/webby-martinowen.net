@@ -51,7 +51,7 @@ filter:
 	</div>
       </div>
       <div id="footer">
-	<p>&copy; 2009 Martin Owen | Powered by <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a></p>
+	<p>&copy; 2009 Martin Owen | Powered by <a href="http://webby.rubyforge.org/" title="Webby">Webby</a></p>
       </div>
     </div>
   </body>

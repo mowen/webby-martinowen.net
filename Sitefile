@@ -9,7 +9,9 @@ Webby.site.sass_options.update(Compass.sass_engine_options)
 
 SITE.base = 'file:///' + File.join(File.dirname(__FILE__), 'output')
 SITE.exclude += %w(partials)
+
 SITE.uv.theme = "twilight"
+SITE.uv.line_numbers = false
 
 task :default => :build
 

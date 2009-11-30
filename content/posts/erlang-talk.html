@@ -26,14 +26,14 @@ filter:
 <p>I grumbled at Chris&#8217; talk that F# seemed <em>too imperative</em> and that I thought Erlang justified its use of functional language features better. My main gripe was the lack of single-assignment semantics. To me <span class="caps">SAS</span> is Erlang&#8217;s killer feature, and the reason people are seeing it as a solution to programming for multi-core processors. If shared variables can&#8217;t be reassigned, then you avoid all of the headaches associated with traditional thread-based concurrency. It also does away with locks completely, meaning that processes are much less likely to wait on each other, and linear speed-ups on multi-core machines become much more likely.</p>
 <p>Erlang is very strict on immutability &#8211; once a variable has been assigned then it can&#8217;t be reassigned. Seriously. Kiss goodbye to reassignment while you&#8217;re working with Erlang, <em>even with local variables</em>. If you really want to do it you just have to create a new variable:</p>
 
-<% uv :lang => "erlang", :line_numbers => true do %>Num = 12,
+<% uv :lang => "erlang" do %>Num = 12,
 Num2 = Num + 1
 <% end %>
 
 <p>(<em>Note that if you need to do this you&#8217;re <a href="http://weblog.hypotheticalabs.com/?p=281">probably doing it wrong</a>.</em>)</p>
 <p>It may seem <em>too</em> strict to restrict the reassignment of local variables. I found an excellent post by Luke Hoersten <a href="http://humani.st/why-make-erlang-a-functional-language/">Why Make Erlang a Functional Language?</a> in which he argues that extending <span class="caps">SAS</span> to local variables adds efficiencies to the language which compensate for the overheads of message passing. Whether you agree with that argument or not, you&#8217;ll find that while working with Erlang you&#8217;ll rarely need to reassign a variable, precisely because of Erlang&#8217;s functional language features. Here&#8217;s a quick <code>length()</code> example:</p>
 
-<% uv :lang => "erlang", :line_numbers => true do %>length(List) -> length(List, 0).
+<% uv :lang => "erlang" do %>length(List) -> length(List, 0).
 length([], Count) -> Count;
 length([Head|Tail], Count) ->
   length(Tail, Count + 1).
