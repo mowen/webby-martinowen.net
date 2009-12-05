@@ -39,11 +39,12 @@ filter:
 	<h2>Blog Posts</h2>
         <p><a href="/atom.xml" class="atom-feed" title="Atom Feed">Atom Feed</a></p>
 	<ul class="posts">
-	  <% @pages.find(10, :in_directory => "posts",
-                         :sort_by => "date", :reverse => true).each do |post| %>
+	  <% @pages.find(10, :in_directory => "blog", :recursive => true,
+	     		 :sort_by => "created_at", :reverse => true,
+			 :blog_post => true).each do |post| %>
 	    <li>
-	      <span class="post-date"><%= post.date %></span><br />
-	      <%= link_to(post.title, post.url) %>
+	      <span class="post-date"><%= post.created_at.strftime('%Y/%m/%d') %></span><br />
+	      <%= link_to_page(post) %>
             </li>		
 	    <% end %>
         </ul>

@@ -4,6 +4,6 @@ filter: erb
 extension: html
 ---
 <div class="post">
-  <h2><span class="post-date"><%= @page.date %></span>&nbsp;::&nbsp;<%= @page.title %></h2>
+  <h2><span class="post-date"><%= @page.created_at.strftime('%Y/%m/%d') %></span>&nbsp;::&nbsp;<%= link_to_page(@page) %></h2>
   <%= @content %>
 </div>
