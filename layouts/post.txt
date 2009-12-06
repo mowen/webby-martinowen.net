@@ -1,9 +1,0 @@
----
-layout: default
-filter: erb
-extension: html
----
-<div class="post">
-  <h2><span class="post-date"><%= @page.created_at.strftime('%Y/%m/%d') %></span>&nbsp;::&nbsp;<%= link_to_page(@page) %></h2>
-  <%= @content %>
-</div>

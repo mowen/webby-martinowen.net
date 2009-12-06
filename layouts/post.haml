@@ -1,0 +1,12 @@
+---
+layout: default
+filter:
+  - haml
+---
+.post
+  %h2
+    %span.post-date
+      = @page.created_at.strftime('%Y/%m/%d')
+      \&nbsp;::&nbsp;
+      = link_to_page(@page)
+  = @content

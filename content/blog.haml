@@ -1,0 +1,10 @@
+---
+layout: default
+title: Blog
+filter:
+  - haml
+  - basepath
+---
+%h2
+  Blog Posts
+= render :partial => "/posts_list", :locals => { :pages => @pages }

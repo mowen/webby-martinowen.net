@@ -2,7 +2,6 @@
 extension: html
 filter:
   - haml
-  - erb
   - basepath
 ---
 !!!
@@ -44,7 +43,7 @@ filter:
               %a{ :href => "/lifestream.html", :title => "Lifestream" }
                 Lifestream
       #main
-        <%= @content %>
+        = @content
       #sidebar
         %h2
           Blog Posts
@@ -52,16 +51,13 @@ filter:
           %a.atom-feed{ :href => "/atom.xml", :title => "Atom Feed" }
             Atom Feed
         %ul.posts
-          <% @pages.find(10, :in_directory => "blog", :recursive => true,
-          \:sort_by => "created_at", :reverse => true,
-          \:blog_post => true).each do |post| %>
-          %li
-            %span.post-date
-              <%= post.created_at.strftime('%Y/%m/%d') %>
-            %br
-            <%= link_to_page(post) %>
-          <% end %>
-        #twitter-updates
+          - posts = find_posts
+          - posts.each do |post|
+            %li
+              %span.post-date
+                = post.created_at.strftime('%Y/%m/%d')
+              %br
+              = link_to_page(post)
       #footer
         %p
           \&copy; 2009 Martin Owen | Powered by
