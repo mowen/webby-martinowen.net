@@ -2,9 +2,9 @@
 title: Comet Talk
 summary: Links on the subject of Comet, and the talk I gave at Liverpool GeekUp on it.
 layout: post
-blog_post: true
-extension: html
 created_at: 2008-04-28 12:47:30.087920 +00:00
+blog_post: true
+published: true
 filter:
   - textile
 ---

@@ -1,11 +1,10 @@
 ---
 title: Howduino - An Arduino Hack Day in Liverpool
-published: false
 summary: My account of the Howduino Arduino hacking event in Liverpool in May 2009.
 created_at: 2009-06-01 21:12:30.087920 +00:00
-blog_post:  true
 layout: post
-extension: html
+published: false
+blog_post: true
 filter:
   - textile
 ---
