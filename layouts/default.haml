@@ -1,0 +1,69 @@
+---
+extension: html
+filter:
+  - haml
+  - erb
+  - basepath
+---
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-type" }
+    %title
+      Martin Owen :: <%= @page.title %>
+    /
+      Framework CSS
+    %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen, projection" }
+    %link{ :href => "/stylesheets/print.css", :rel => "stylesheet", :type => "text/css", :media => "print" }
+    /
+      [if lt IE 8]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+      <![endif]
+    %link{ :href => "/stylesheets/twilight.css", :rel => "stylesheet", :type => "text/css" }
+    %script{ :language => "javascript", :type => "text/javascript", :src => "/scripts/jquery-1.3.2.min.js" }
+    /
+      <script language="javascript" type="text/javascript" src="/scripts/martinowen.js"></script>
+  %body.bp
+    .container
+      #header
+        %h1
+          %a{ :href => "/index.html", :title => "Home" }
+            Martin Owen
+        #nav-bar
+          %ul
+            %li
+              %a{ :href => "/index.html", :title => "Home" }
+                Home
+            %li
+              %a{ :href => "/about.html", :title => "About" }
+                About
+            %li
+              %a{ :href => "/blog.html", :title => "Blog" }
+                Blog
+            %li
+              %a{ :href => "/lifestream.html", :title => "Lifestream" }
+                Lifestream
+      #main
+        <%= @content %>
+      #sidebar
+        %h2
+          Blog Posts
+        %p
+          %a.atom-feed{ :href => "/atom.xml", :title => "Atom Feed" }
+            Atom Feed
+        %ul.posts
+          <% @pages.find(10, :in_directory => "blog", :recursive => true,
+          \:sort_by => "created_at", :reverse => true,
+          \:blog_post => true).each do |post| %>
+          %li
+            %span.post-date
+              <%= post.created_at.strftime('%Y/%m/%d') %>
+            %br
+            <%= link_to_page(post) %>
+          <% end %>
+        #twitter-updates
+      #footer
+        %p
+          \&copy; 2009 Martin Owen | Powered by
+          %a{ :href => "http://webby.rubyforge.org/", :title => "Webby" }
+            Webby
