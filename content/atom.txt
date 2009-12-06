@@ -22,12 +22,7 @@ filter:    erb
     <email><%= h(@page.email) %></email>
   </author>
   <id>http://<%= @page.site %>/</id>
-  <% @pages.find(:limit => 10,
-                 :in_directory => 'blog',
-                 :recursive => true,
-                 :sort_by => 'mtime',
-                 :blog_post => true,
-                 :reverse => true).each do |article|
+  <% find_posts.each do |article|
     next if article == @page
   %>
   <entry>

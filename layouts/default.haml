@@ -26,41 +26,10 @@ filter:
   %body.bp
     .container
       #header
-        %h1
-          %a{ :href => "/index.html", :title => "Home" }
-            Martin Owen
-        #nav-bar
-          %ul
-            %li
-              %a{ :href => "/index.html", :title => "Home" }
-                Home
-            %li
-              %a{ :href => "/about.html", :title => "About" }
-                About
-            %li
-              %a{ :href => "/blog.html", :title => "Blog" }
-                Blog
-            %li
-              %a{ :href => "/lifestream.html", :title => "Lifestream" }
-                Lifestream
+        = render :partial => "/header"
       #main
         = @content
       #sidebar
-        %h2
-          Blog Posts
-        %p
-          %a.atom-feed{ :href => "/atom.xml", :title => "Atom Feed" }
-            Atom Feed
-        %ul.posts
-          - posts = find_posts
-          - posts.each do |post|
-            %li
-              %span.post-date
-                = post.created_at.strftime('%Y/%m/%d')
-              %br
-              = link_to_page(post)
+        = render :partial => "/sidebar"
       #footer
-        %p
-          \&copy; 2009 Martin Owen | Powered by
-          %a{ :href => "http://webby.rubyforge.org/", :title => "Webby" }
-            Webby
+        = render :partial => "/footer"
