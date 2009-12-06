@@ -27,9 +27,11 @@ filter:
     .container
       #header
         = render :partial => "/header"
+      %hr
       #main
         = @content
       #sidebar
         = render :partial => "/sidebar"
+      %hr
       #footer
         = render :partial => "/footer"
