@@ -3,19 +3,7 @@ filter: haml
 ---
 %hr
 #nav-bar
-  %ul
-    %li
-      %a{ :href => "/index.html", :title => "Home" }
-        Home
-    %li
-      %a{ :href => "/about.html", :title => "About" }
-        About
-    %li
-      %a{ :href => "/blog.html", :title => "Blog" }
-        Blog
-    %li
-      %a{ :href => "/lifestream.html", :title => "Lifestream" }
-        Lifestream
+  = render :partial => "/nav_bar"
 %hr
 %h1
   %a{ :href => "/index.html", :title => "Home" }
