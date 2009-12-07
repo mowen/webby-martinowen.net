@@ -2,11 +2,9 @@
 title: Blogging with Jekyll
 summary: My experiences of blogging with the Jekyll Ruby library, and not looking back.
 created_at: 2009-10-19 11:47:30.087920 +00:00
-layout: post
 blog_post:  true
 published: false
-filter:
-  - textile
+filter: textile
 ---
 h3. Blogger's Block
 

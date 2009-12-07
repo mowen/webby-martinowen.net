@@ -2,11 +2,9 @@
 title: Learning Git
 summary: My thoughts on the Git distributed version system, and some tips for people interested in giving it a try.
 created_at: 2009-08-10 18:47:30.087920 +00:00
-layout: post
 blog_post: true
 published: false
-filter:
-  - textile
+filter: textile
 ---
 I've spent time with Git on home projects since about January, here are my thoughts.
 

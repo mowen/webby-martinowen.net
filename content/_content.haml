@@ -1,0 +1,7 @@
+---
+filter: haml
+---
+- if @page.blog_post
+  = render :partial => '/post'
+- else
+  = render :partial => '/static_page'

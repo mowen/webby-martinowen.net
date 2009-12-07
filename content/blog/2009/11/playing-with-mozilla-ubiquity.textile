@@ -1,12 +1,10 @@
 ---
 title: Playing with Mozilla Ubiquity
 summary: Getting to know Mozilla's impressive new Ubiquity Firefox extension, and my experiences of working on a command for it.
-layout: post
 created_at: 2009-11-14 19:57:30.087920 +00:00
 blog_post: true
 published: false
-filter:
-  - textile
+filter: textile
 ---
 I took a look at "Mozilla Ubiquity":https://mozillalabs.com/ubiquity/ recently, which is best described as an attempt at a natural language launcher for web services. It reminds me of the Mac launcher app "Quicksilver":http://en.wikipedia.org/wiki/Quicksilver_%28software%29. For example, if you type "weather liverpool" into it, you get the weather for Liverpool.
 

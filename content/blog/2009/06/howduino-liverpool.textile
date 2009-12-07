@@ -2,11 +2,9 @@
 title: Howduino - An Arduino Hack Day in Liverpool
 summary: My account of the Howduino Arduino hacking event in Liverpool in May 2009.
 created_at: 2009-06-01 21:12:30.087920 +00:00
-layout: post
 published: false
 blog_post: true
-filter:
-  - textile
+filter: textile
 ---
 The Arduino is the cutest piece of hardware since WALL-E. Like my first iPod, every time I see it I am surprised by how small it is. The hardware is pretty simple, just an AT* microcontroller, and some inputs/outputs.
 

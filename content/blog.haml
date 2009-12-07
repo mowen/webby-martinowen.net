@@ -5,6 +5,15 @@ filter:
   - haml
   - basepath
 ---
+-paginate = @page.paginate || true
+-per_page = @page.per_page || 10
+-articles = find_posts
 %h2
   Blog Posts
-= render :partial => "/posts_list", :locals => { :pages => @pages }
+-articles.delete(@page)
+-if paginate
+  -paginate(articles, per_page) do |page|
+    = render :partial => '/post', :locals => {:page => page}
+-else
+  -articles.each do |page|
+    = render :partial => '/post', :locals => {:page => page}
