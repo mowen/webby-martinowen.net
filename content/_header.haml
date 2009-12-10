@@ -6,5 +6,6 @@ filter: haml
   = render :partial => "/nav_bar"
 %hr
 %h1
-  %a{ :href => "/index.html", :title => "Home" }
+  %a{ :href => "/index.html", :title => "Home" }><
     Martin Owen
+  &nbsp;//&nbsp;#{ link_to_page(@page) }

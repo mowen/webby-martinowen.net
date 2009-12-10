@@ -5,7 +5,7 @@ filter: haml
 .post
   %h2
     %span.post-date
-      = page.created_at.strftime('%Y/%m/%d')
-      \&nbsp;::&nbsp;
-      = link_to_page(page)
+      = format_post_date_long(page.created_at)
+  %p.post-summary
+    = @page.summary
   ~@page.blog_post ? @content : render(page)

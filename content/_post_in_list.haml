@@ -1,0 +1,12 @@
+---
+filter: haml
+---
+- page = @page if @page.blog_post
+.post
+  %h2
+    %span.post-date><
+      = format_post_date_short(page.created_at)
+    &nbsp;//&nbsp;#{ link_to_page(page) }
+  %p.post-summary
+    = @page.summary
+  ~@page.blog_post ? @content : render(page)

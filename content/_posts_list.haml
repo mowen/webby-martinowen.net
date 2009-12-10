@@ -6,7 +6,7 @@ filter: haml
   - posts.each do |post|
     %li
       %span.post-date
-        = post.created_at.strftime('%Y/%m/%d')
+        = format_post_date_short(post.created_at)
         &raquo; 
         = link_to_page(post)
       %p.post-summary
