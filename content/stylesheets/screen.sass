@@ -11,7 +11,6 @@ layout: nil
 !blueprint_font_size = 16px
 
 !font_color= lighten(#000, 20)
-!link_color = #046380
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import blueprint
@@ -43,7 +42,7 @@ layout: nil
     +no-bullets
   a
     +header-font-style
-    text-decoration: none
+    border-bottom: none
 
 #main
   !content_columns = 16
@@ -88,12 +87,16 @@ body.bp
   .post
     h2
       a
-        text-decoration: none
+        border-bottom: none
     .post-summary
       +header-font-style
       // The settings below are for h2
       font-size: 2em
       margin-bottom: 0.75em
+  a
+    +link-colors( !link_color, !link_hover_color, !link_active_color, !link_visited_color, !link_focus_color )
+    text-decoration: none
+    border-bottom: 1px dotted #666
   // This turns link icons on for all links.
   //+link-icons
   // Use this class if a link gets an icon when it shouldn't.
@@ -110,7 +113,7 @@ body.bp
     +no-bullets
     a
       +header-font-style
-      text-decoration: none
+      border-bottom: none
   pre, code
     font-family= !blueprint_fixed_font_family
   pre

@@ -27,8 +27,7 @@ h4. Syntax
 
 My only complaint is that the syntax seems very unnatural, mixins (which you can think of as CSS macros) are prefixed with a "+" and variables are prefixed with a "!", which I don't like because it makes conditional statements look a little strange:
 
-<pre>
-@if !bold
+<pre>@if !bold
   font-weight: bold
 </pre>
 
