@@ -14,7 +14,7 @@ h4. Github
 
 Github was my primary motivation for getting to know Git. It's an amazing piece of work - a cross between Sourceforge and Twitter. When you compare it to Microsoft's open source project hosting effort CodePlex, you can see just how much they are playing catch-up in this area.
 
-I don't even think the code you push to GitHub even needs to be anything special.
+I don't even think the code you push to GitHub even needs to be anything special. "Here's someone who pushed everything they had":http://www.catonmat.net/blog/i-pushed-30-of-my-projects-to-github/ (30 projects). And why not? 
 
 "Here's a fun example":http://github.com/rails/rails/commit/22af62cf486721ee2e45bb720c42ac2f4121faf4 of people taking an interest in a commit.
 
