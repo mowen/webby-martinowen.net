@@ -15,12 +15,9 @@
 @import theme.sass
 @import border-radius.sass
 
-!header_font = "Helvetica", "Arial"
-!header_letter_spacing = -0.05em
-
 =header-font-style( !bold = true )
   font-family= !header_font
-  letter-spacing= !header_letter_spacing
+  letter-spacing: -0.04em
   @if !bold
     font-weight: bold
 
