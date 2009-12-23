@@ -21,6 +21,22 @@
   @if !bold
     font-weight: bold
 
+=include_link_icons
+  a[href^="mailto:"]
+    +link-icon("email.png")
+  a[href$=".pdf"]
+    +link-icon("pdf.png")
+  a[href$=".doc"]
+    +link-icon("doc.png")
+  a[href$=".xls"]
+    +link-icon("xls.png")
+  a.atom-feed,
+  a[href$=".rss"],
+  a[href$=".rdf"]
+    +link-icon("feed.png")
+  //a.noicon
+  //  +no-link-icon
+
 !post_background = #f0f0f0
 // I used to use the colour below for .post h3
 !post_header_background = #eff

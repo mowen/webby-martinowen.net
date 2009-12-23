@@ -18,4 +18,4 @@ I'm due to give a talk on "Comet":http://en.wikipedia.org/wiki/Comet_%28programm
 
 The Upcoming page for the talk is "here":http://upcoming.yahoo.com/event/452594/.
 
-*UPDATE:* "Here are the slides.":http://blog.martinowen.net/wp-content/uploads/2008/05/comettalk.pdf
+*UPDATE:* "Here are the slides.":/files/comettalk.pdf

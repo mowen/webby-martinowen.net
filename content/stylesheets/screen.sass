@@ -98,15 +98,7 @@ body.bp
     +link-colors( !link_color, !link_hover_color, !link_active_color, !link_visited_color, !link_focus_color )
     text-decoration: none
     border-bottom: 1px dotted #666
-  // This turns link icons on for all links.
-  //+link-icons
-  // Use this class if a link gets an icon when it shouldn't.
-  a.noicon
-    +no-link-icon
-  // Not all links have a url structure that can be detected,
-  // So you can set them explicitly yourself like so:
-  a.atom-feed
-    +link-icon("feed.png")
+  +include_link_icons
   h1, h2, h3, h4, h5, h6
     +header-font-style
   .posts-list

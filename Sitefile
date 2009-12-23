@@ -1,14 +1,19 @@
 require 'compass'
 require 'compass-colors'
 
+HTTP_BASE = 'file:///' + File.join(File.dirname(__FILE__), 'output')
+
 Compass.configuration do |config|
   config.project_path = File.dirname(__FILE__)
   config.sass_dir = File.join('content', 'stylesheets')
+  config.images_dir = File.join('content', 'images')
+  config.http_path = HTTP_BASE
+  config.http_images_path = HTTP_BASE + "/images"
 end
 
 Webby.site.sass_options.update(Compass.sass_engine_options)
 
-SITE.base = 'file:///' + File.join(File.dirname(__FILE__), 'output')
+SITE.base = HTTP_BASE
 SITE.exclude += %w(partials)
 
 SITE.uv.theme = "twilight"
