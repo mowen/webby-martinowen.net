@@ -46,8 +46,7 @@ layout: nil
     border-bottom: none
 
 #main
-  !content_columns = 16
-  +column(!content_columns)
+  +column(16)
 
 #header
   a
@@ -82,18 +81,6 @@ body.bp
   +blueprint-debug
   +blueprint-interaction
   //+showgrid("grid.png")
-  .post-date
-    +header-font-style(false)
-    +quiet
-  .post
-    h2
-      a
-        border-bottom: none
-    .post-summary
-      +header-font-style
-      // The settings below are for h2
-      font-size: 2em
-      margin-bottom: 0.75em
   a
     +link-colors( !link_color, !link_hover_color, !link_active_color, !link_visited_color, !link_focus_color )
     text-decoration: none
@@ -101,6 +88,9 @@ body.bp
   +include_link_icons
   h1, h2, h3, h4, h5, h6
     +header-font-style
+  .post-date
+    +header-font-style(false)
+    +quiet
   .posts-list
     margin-left: 0px
     +no-bullets
@@ -123,6 +113,25 @@ body.bp
       padding-left: 0.2em
       padding-right: 0.2em
       +border-radius(0.2em)
+  #front-page
+    .post-box
+      +column( !blueprint_grid_columns / 4)
+    .last-post-box
+      +column( !blueprint_grid_columns / 4, true)
+    .post-box, .last-post-box
+      a
+        +header-font-style
+        border-bottom: none
+  #main
+    .post
+      h2
+        a
+          border-bottom: none
+      .big-summary
+        +header-font-style
+        // The settings below are for h2
+        font-size: 2em
+        margin-bottom: 0.75em
 
 form.bp
   +blueprint-form

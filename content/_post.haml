@@ -6,6 +6,6 @@ filter: haml
   %h2
     %span.post-date
       = format_post_date_long(page.created_at)
-  %p.post-summary
+  %p.big-summary
     = @page.summary
   ~@page.blog_post ? @content : render(page)
