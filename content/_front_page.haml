@@ -12,8 +12,7 @@ filter: haml
       = link_to_page(post)
       %p.post-summary
         = post.summary
-    - if (index + 1) != num_of_posts
-      %hr
+    %hr
   - else 
     .post-box
       %span.post-date

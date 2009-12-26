@@ -26,7 +26,6 @@ filter:
     .container
       #header
         = render :partial => "/header"
-      %hr
       - if @page.front_page
         #front-page  
           = render :partial => '/front_page'
@@ -35,6 +34,5 @@ filter:
           = render :partial => '/content'
         #sidebar
           = render :partial => "/sidebar"
-      %hr
       #footer
         = render :partial => "/footer"

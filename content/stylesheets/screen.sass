@@ -35,7 +35,7 @@ layout: nil
   +column(!blueprint_grid_columns)
 
 #sidebar
-  !sidebar_columns = 8
+  !sidebar_columns = 7
   // true means it's the last column in the row
   +column(!sidebar_columns, true)
   ul.posts
@@ -47,6 +47,7 @@ layout: nil
 
 #main
   +column(16)
+  +colborder
 
 #header
   a
