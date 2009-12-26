@@ -6,19 +6,19 @@ filter: haml
 - posts.each_with_index do |post, index|
   - if (index + 1) % 4 == 0
     .last-post-box
-      = link_to_page(post)
-      %br
       %span.post-date
         = format_post_date_short(post.created_at)
+      %br
+      = link_to_page(post)
       %p.post-summary
         = post.summary
     - if (index + 1) != num_of_posts
       %hr
   - else 
     .post-box
-      = link_to_page(post)
-      %br
       %span.post-date
         = format_post_date_short(post.created_at)
+      %br
+      = link_to_page(post)
       %p.post-summary
         = post.summary
