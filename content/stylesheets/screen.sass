@@ -67,16 +67,6 @@ layout: nil
         display: inline
         margin-right: 50px
 
-#lifestream
-  ul
-    margin-left: 0px
-    +no-bullets
-    li
-      display: inline
-      a
-        +header-font-style
-        text-decoration: none
-
 body.bp
   +blueprint-utilities
   +blueprint-debug
@@ -114,15 +104,22 @@ body.bp
       padding-left: 0.2em
       padding-right: 0.2em
       +border-radius(0.2em)
+  #front-page, #lifestream
+    .post-box, .last-post-box
+      overflow: hidden
+      a
+        +header-font-style
+        border-bottom: none
   #front-page
     .post-box
       +column( !blueprint_grid_columns / 4)
     .last-post-box
       +column( !blueprint_grid_columns / 4, true)
-    .post-box, .last-post-box
-      a
-        +header-font-style
-        border-bottom: none
+  #lifestream
+    .post-box
+      +column( !blueprint_grid_columns / 5)
+    .last-post-box
+      +column( !blueprint_grid_columns / 5, true)
   #main
     .post
       h2

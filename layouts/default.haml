@@ -27,8 +27,11 @@ filter:
       #header
         = render :partial => "/header"
       - if @page.front_page
-        #front-page  
+        #front-page
           = render :partial => '/front_page'
+      - elsif @page.lifestream
+        #lifestream
+          ~@content
       - else
         #main
           = render :partial => '/content'
