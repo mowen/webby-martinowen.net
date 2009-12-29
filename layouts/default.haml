@@ -36,6 +36,9 @@ filter:
         #main
           = render :partial => '/content'
         #sidebar
-          = render :partial => "/sidebar"
+          - if @page.name == "about"
+            = render :partial => "/social_network_links"
+          - else
+            = render :partial => "/sidebar"
       #footer
         = render :partial => "/footer"

@@ -37,6 +37,28 @@
   //a.noicon
   //  +no-link-icon
 
+=social-icon-base
+  padding-left: 20px
+  background-repeat: no-repeat
+  background-position: left center
+
+=include_social_icons
+  a.delicious
+    +link-icon("social_icons/delicious_16.png", false)
+  a.twitter
+    +link-icon("social_icons/twitter_16.png", false)
+  a.lastfm
+    +link-icon("social_icons/lastfm_16.png", false)
+  a.facebook
+    +link-icon("social_icons/facebook_16.png", false)
+  a.flickr
+    +link-icon("social_icons/flickr_16.png", false)
+  a.github
+    +link-icon("social_icons/github_16.png", false)
+  a.delicious, a.twitter, a.lastfm,
+  a.facebook, a.flickr, a.github
+    +social-icon-base
+
 !post_background = #f0f0f0
 // I used to use the colour below for .post h3
 !post_header_background = #eff

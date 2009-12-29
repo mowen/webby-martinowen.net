@@ -38,7 +38,7 @@ layout: nil
   !sidebar_columns = 7
   // true means it's the last column in the row
   +column(!sidebar_columns, true)
-  ul.posts
+  ul.posts, ul.social-network-links
     margin-left: 0px
     +no-bullets
   a
@@ -77,6 +77,7 @@ body.bp
     text-decoration: none
     border-bottom: 1px dotted #666
   +include_link_icons
+  +include_social_icons
   h1, h2, h3, h4, h5, h6
     +header-font-style
   .post-date
