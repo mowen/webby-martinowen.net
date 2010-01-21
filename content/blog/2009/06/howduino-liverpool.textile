@@ -1,13 +1,40 @@
 ---
-title: Howduino - An Arduino Hack Day in Liverpool
+title: Twitter Racing at Howduino Liverpool
 summary: My account of the Howduino Arduino hacking event in Liverpool in May 2009.
 created_at: 2009-06-01 21:12:30.087920 +00:00
 published: false
 blog_post: true
 filter: textile
 ---
-The Arduino is the cutest piece of hardware since WALL-E. Like my first iPod, every time I see it I am surprised by how small it is. The hardware is pretty simple, just an AT* microcontroller, and some inputs/outputs.
+The Arduino is the cutest piece of hardware since WALL-E. Like my first iPod, every time I see it I am surprised by how small it is. The hardware is pretty simple, just an AT* microcontroller and some inputs/outputs, meaning that they're pretty cheap too.
+
+I'd known about them for a while (and had attended Adrian McEwen's talk at the Liverpool BarCamp back in December) but had put off buying one because I've always been under the impression that hardware is much harder to debug than software, and I pictured myself spending hours of my precious free time trying to detect an elusive problem.
+
+When I finally took the plunge, I bought an Ethernet shield along with the Ardunino itself, partly because it looked like tinker.it would sell out before the event, but also because I thought that whatever project I did would *have* to involve the internet.
+
+h3. Preparing for the event - My first project
+
+So upon receiving my Arduino I set about getting an LED to blink (the "Hello World" of Arduino development). That was easy, so the next step meant an excuse to use the Ethernet shield - controlling an LED via the web. This turned out to be suprisingly simple thanks to an open source library named Webduino.
+
+The Webudino library is a small HTTP server for the Arduino, and handles GET requests, including parsing query string parameters. That was all I needed to start receiving HTTP requests on the Arduino. So with a simple web page which contained 4 checkboxes and a submit button, I was able to turn 4 LEDs on or off depending on the value of their checkboxes.
+
+This was very encouraging, as although lighting up LEDs isn't very useful, the implications of being able to control something physical via a web page was quite exciting, especially considering that I'd only spent a few hours getting it to work. I was an Arduino fan already.
 
 h3. Twitter Racing
 
-My plan was to race Twitter search terms, and potentially users too.
+At the Howduino event, I decided that I would try to race remote controlled cars based on how well certain search terms were doing on Twitter. Twitter is well known for its search api, and it is one of the secrets of its success, so using it looked like it would be simple.
+
+h4. Getting the timeline data
+
+When I initially conceived of the idea I had been intending to use the ethernet shield to access the Twitter API in real time, but it soon became obvious that the ethernet shield would be unnecessary. I could get all of the data I needed before the start of the race using a Ruby script, and then send it to the Arduino in a stream of serial bytes via the Arudino IDE. Each car would have a character in the stream, and when that character appeared it would move a little (more on this later).
+
+I wrote a simple program in Processing for simulating the timelines to see which races would be most exciting.
+
+h4. Getting ahead of myself
+
+Prior to the event, I started to get clever, thinking that this was too simple and needed a bit more control. I had an analogue slider so I intended to use it to control the speed of the race. My intentions were good - while testing with the Processing simulation I had found that some races were very fast and some were very slow, depending on the participants of the race. For example a race between the finalists on American Idol during the final itself would be very fast as hundreds of Tweets occur each second, but two more obscure topics would be much slower as their Tweets trickled in over months.
+
+h4. Survival of the fittest
+
+It wasn't until the day after the event when I started running a control race - both cars being sent the exact same timeline - and realised that one car (the blue) was much less powerful than the other. This was a big setback, because without adding a handicap to the program the race could never be fair.
+

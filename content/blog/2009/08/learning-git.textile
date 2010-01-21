@@ -6,17 +6,17 @@ blog_post: true
 published: false
 filter: textile
 ---
-I've spent time with Git on home projects since about January, here are my thoughts.
+I've been using Git on home projects since about January, so here are some of my thoughts.
 
 h3. Why should I use Git?
 
-h4. Github
+h4. GitHub
 
-Github was my primary motivation for getting to know Git. It's an amazing piece of work - a cross between Sourceforge and Twitter. When you compare it to Microsoft's open source project hosting effort CodePlex, you can see just how much they are playing catch-up in this area.
+GitHub was my primary motivation for getting to know Git. It's an amazing piece of work - like a wonderful blend of Sourceforge and Twitter. When you compare it to Microsoft's open source project hosting effort "CodePlex":http://www.codeplex.com/, you can see just how much they are playing catch-up in this area.
 
-I don't even think the code you push to GitHub even needs to be anything special. "Here's someone who pushed everything they had":http://www.catonmat.net/blog/i-pushed-30-of-my-projects-to-github/ (30 projects). And why not? 
+I don't even think the code you push to GitHub even needs to be anything special. None of the things that I've pushed are fully-fledged open source projects. "Here's someone who pushed everything they had":http://www.catonmat.net/blog/i-pushed-30-of-my-projects-to-github/ (30 projects). And why not? 
 
-"Here's a fun example":http://github.com/rails/rails/commit/22af62cf486721ee2e45bb720c42ac2f4121faf4 of people taking an interest in a commit.
+The way the site (and Git itself) is designed encourages collaboration on projects. "Here's a funny example":http://github.com/rails/rails/commit/22af62cf486721ee2e45bb720c42ac2f4121faf4 of people arguing over a Ruby on Rails commit.
 
 h4. Local commits
 
@@ -64,7 +64,7 @@ I'm not ashamed to say that Git took a while to get my head around, the fact tha
 
 The last of those suggestions accelerated my learning more than anything else. The structure of a Git repository is simpler than a Subversion one, and all the command line tools do is modify them.
 
-Scott Chacon's Git Internals PDF at Peepcode helped me a great deal in understanding the file system.
+Scott Chacon's "Git Internals PDF":http://peepcode.com/products/git-internals-pdf at Peepcode helped me a great deal in understanding the file system.
 
 h3. Subversion features don't map directly to Git
 
