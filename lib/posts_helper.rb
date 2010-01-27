@@ -9,7 +9,7 @@ module PostsHelper
                 :sort_by => "created_at",
                 :reverse => true,
                 :blog_post => true }
-    options[:published] = true if HIDE_UNPUBLISHED
+    options[:draft] = nil if HIDE_UNPUBLISHED
     ::Webby::Resources.pages.find(limit, options)
   end
 
