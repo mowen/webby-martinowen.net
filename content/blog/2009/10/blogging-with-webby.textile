@@ -25,4 +25,4 @@ h3. Webby
 
 And so I discovered Webby. This isn't the first static site generator written in Ruby that I've played with ("StaticMatic":http://staticmatic.rubyforge.org/ and "Jekyll":http://jekyllrb.com/ being the others) but it is the one I've got along with most easily. _I was very close to going with Jekyll, but I didn't like the lack of support for HAML and didn't want to use a fork._
 
-I'm also using Ultraviolet with for syntax highlighting, which uses Textmate bundles to support every language I could ever imagine blogging about.
+I'm also using "Ultraviolet":http://ultraviolet.rubyforge.org/ with for syntax highlighting, which uses Textmate bundles to support every language I could ever imagine blogging about.
