@@ -1,7 +1,7 @@
 module PostsHelper
 
   BLOG_POST_LIMIT = 10
-  HIDE_UNPUBLISHED = false
+  HIDE_UNPUBLISHED = true
 
   def find_posts(limit=BLOG_POST_LIMIT)
     options = { :in_directory => 'blog', 

@@ -4,7 +4,7 @@ filter: haml
 - num_of_posts = 8
 - posts = find_posts(num_of_posts)
 - posts.each_with_index do |post, index|
-  - if (index + 1) % 4 == 0
+  - if (index + 1) % 4 == 0 || (index + 1) == posts.length
     .last-post-box
       %span.post-date
         = format_post_date_short(post.created_at)
