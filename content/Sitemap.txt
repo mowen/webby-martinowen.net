@@ -21,7 +21,7 @@ filter: erb
     <priority>0.7</priority>
   </url>
   <url>
-    <loc><%= Webby.site.base %>/blog.html/</loc>
+    <loc><%= Webby.site.base %>/blog/index.html/</loc>
     <lastmod><%= Time.now.strftime('%Y-%m-%d') %></lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

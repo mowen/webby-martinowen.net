@@ -1,8 +1,8 @@
 require 'compass'
 require 'compass-colors'
 
-# HTTP_BASE = 'http://new.martinowen.net'
-HTTP_BASE = 'http://localhost/martinowen'
+HTTP_BASE = 'http://martinowen.net'
+# HTTP_BASE = 'http://localhost/martinowen'
 
 Compass.configuration do |config|
   config.project_path = File.dirname(__FILE__)
@@ -19,7 +19,9 @@ SITE.exclude += %w(partials lifestream.html)
 
 SITE.user = "martylic"
 SITE.host = "martinowen.net"
-SITE.remote_dir = "/home/martylic/public_html/new"
+SITE.remote_dir = "/home/martylic/public_html/"
+
+SITE.disqus_forum_name = "martinowen"
 
 SITE.uv.theme = "twilight"
 SITE.uv.line_numbers = false
