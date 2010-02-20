@@ -1,7 +1,8 @@
 require 'compass'
 require 'compass-colors'
 
-HTTP_BASE = 'file:///' + File.join(File.dirname(__FILE__), 'output')
+# HTTP_BASE = 'http://new.martinowen.net'
+HTTP_BASE = 'http://localhost/martinowen'
 
 Compass.configuration do |config|
   config.project_path = File.dirname(__FILE__)
@@ -14,7 +15,11 @@ end
 Webby.site.sass_options.update(Compass.sass_engine_options)
 
 SITE.base = HTTP_BASE
-SITE.exclude += %w(partials)
+SITE.exclude += %w(partials lifestream.html)
+
+SITE.user = "martylic"
+SITE.host = "martinowen.net"
+SITE.remote_dir = "/home/martylic/public_html/new"
 
 SITE.uv.theme = "twilight"
 SITE.uv.line_numbers = false

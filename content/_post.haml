@@ -9,4 +9,10 @@ filter: haml
   %p.big-summary
     = @page.summary
   ~@page.blog_post ? @content : render(page)
+  %span.comment_count
+    %a{:href=>"#{page.url}#disqus_thread"}
+      View Comments
+  - if @page.blog_post
+    .comments
+      =render :partial => '/disqus_thread'
 %hr

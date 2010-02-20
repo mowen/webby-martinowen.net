@@ -4,4 +4,4 @@ extension: txt
 layout: nil
 ---
 User-agent: *
-Disallow: /lifestream.html
+Allow: /
