@@ -1,5 +1,4 @@
 ---
-dirty: false
 layout: nil
 ---
 RewriteEngine on
@@ -14,3 +13,6 @@ Redirect /2008/04/comet-talk/ http://martinowen.net/blog/2008/04/comet-talk.html
 Redirect /2008/04/comet-talk http://martinowen.net/blog/2008/04/comet-talk.html
 Redirect /feed/ http://martinowen.net/blog/atom.xml
 Redirect /feed http://martinowen.net/blog/atom.xml
+
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner
+RewriteRule ^atom\.xml$ http://feeds.feedburner.com/MartinOwen [R,L]
