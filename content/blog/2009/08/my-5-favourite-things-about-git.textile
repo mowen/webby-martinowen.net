@@ -51,7 +51,7 @@ Martin Fowler suggests refactoring a project in order to get to know it, and loc
 
 h4. Many clones means many backups
 
-I've never experienced the horror of a lost or corrupt source code repository, but I can imagine how painful it myst be. With a distributed version control system like Git every clone is a full copy of the repository, so if the original is lost then the bulk of the history will still be there in one of the clones.
+I've never experienced the horror of a lost or corrupt source code repository, but I can imagine how painful it must be. With a distributed version control system like Git every clone is a full copy of the repository, so if the original is lost then the bulk of the history will still be there in one of the clones.
 
 h4. You can amend your local commits
 
