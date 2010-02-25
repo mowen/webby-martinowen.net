@@ -11,7 +11,7 @@ h3. 5. Only one .git directory and .gitignore file
 
 A minor irritation with Subversion and CVS is that each checked out directory contains a ".svn" metadata directory. If you want to get a copy of the code without the metadata, you have to check it out with the special "export" command. Git keeps all of its metadata in a .git folder at the top level of the cloned repository. This means you simply delete the .git folder to remove all traces of "gitness".
 
-Files to be ignored can also be specified in one .gitignore file at the top level, and that file is committed like any other. This is something that requires editing the "svn:ignore" property in Subversion, which seems unnecassary when you could edit a single config file instead.
+Files to be ignored can also be specified in one .gitignore file at the top level, and that file is committed like any other. This is something that requires editing the "svn:ignore" property in Subversion, which seems unnecessary when you could edit a single config file instead.
 
 h3. 4. Branching is easier
 
