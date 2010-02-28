@@ -9,7 +9,7 @@ filter: erb
   <!-- changefreq can be never, yearly, monthly, weekly, daily, hourly, or always -->
   <!-- priority is between 0 and 1 -->
   <url>
-    <loc><%= Webby.site.base %></loc>
+    <loc><%= Webby.site.base %>/</loc>
     <lastmod><%= Time.now.strftime('%Y-%m-%d') %></lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -21,7 +21,7 @@ filter: erb
     <priority>0.7</priority>
   </url>
   <url>
-    <loc><%= Webby.site.base %>/blog/index.html/</loc>
+    <loc><%= Webby.site.base %>/blog/</loc>
     <lastmod><%= Time.now.strftime('%Y-%m-%d') %></lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

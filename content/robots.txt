@@ -4,3 +4,6 @@ layout: nil
 ---
 User-agent: *
 Allow: /
+
+User-agent: Googlebot/2.1 
+Sitemap: http://martinowen.net/sitemap.xml
