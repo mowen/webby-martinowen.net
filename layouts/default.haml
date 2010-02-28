@@ -11,7 +11,7 @@ filter:
     - if @page.summary
       %meta{ :name => "description", :content => @page.summary }
     %title
-      = @page.title
+      = @page.title.to_s + " | Martin Owen"
     /
       Framework CSS
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen, projection" }
