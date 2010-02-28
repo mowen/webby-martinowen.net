@@ -128,11 +128,14 @@ body.bp
       h2
         a
           border-bottom: none
-      .big-summary
+      p.post-date
         +header-font-style
-        // The settings below are for h2
-        font-size: 2em
-        margin-bottom: 0.75em
+        +quiet
+        // Style below stolen from h3.
+        // TODO: This shouldn't be hard-coded!!!!
+        font-size: 1.5em
+        line-height: 1
+        margin-bottom: 1em
 
 form.bp
   +blueprint-form

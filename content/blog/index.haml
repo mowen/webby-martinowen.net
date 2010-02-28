@@ -8,8 +8,6 @@ filter:
 -paginate = @page.paginate || true
 -per_page = @page.per_page || 10
 -articles = find_posts
-%h2
-  Blog Posts
 -articles.delete(@page)
 -if paginate
   -paginate(articles, per_page) do |page|

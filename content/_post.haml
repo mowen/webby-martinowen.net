@@ -3,16 +3,17 @@ filter: haml
 ---
 - page = @page if @page.blog_post
 .post
-  %h2
-    %span.post-date
-      = format_post_date_long(page.created_at)
-  %p.big-summary
+  %h2.summary
     = @page.summary
+  %p.post-date
+    = format_post_date_long(page.created_at)
+  %hr
   ~@page.blog_post ? @content : render(page)
+  %hr
   %span.comment_count
     %a{:href=>"#{page.url}#disqus_thread"}
       View Comments
   - if @page.blog_post
     .comments
       =render :partial => '/disqus_thread'
-%hr
+  %hr
