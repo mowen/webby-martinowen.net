@@ -1,0 +1,13 @@
+---
+filter: haml
+---
+/
+  Framework CSS
+%link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen, projection" }
+%link{ :href => "/stylesheets/print.css", :rel => "stylesheet", :type => "text/css", :media => "print" }
+/
+  [if lt IE 8]>
+  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <![endif]
+%link{ :href => "/stylesheets/twilight.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :rel => "alternate", :type => "application/atom+xml", :title => "Atom feed for martinowen.net", :href => "http://martinowen.net/blog/atom.xml" }

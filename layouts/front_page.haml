@@ -8,18 +8,15 @@ filter:
 %html{ :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-type" }
-    - if @page.summary
-      %meta{ :name => "description", :content => @page.summary }
-    %title= @page.title.to_s + " | Martin Owen"
+    %meta{ :name => "description", :content => "The website and blog of Martin Owen a web developer in Liverpool, UK." }
+    %title The website and blog of Martin Owen, a web developer in Liverpool, UK
     = render :partial => "/default_includes"
   %body.bp
     .container
       #header
         = render :partial => "/header"
-      #main
-        = render :partial => "/content"
-      #sidebar
-        = render :partial => "/sidebar"
+      #front-page
+        = render :partial => "/front_page"
       #footer
         = render :partial => "/footer"
     = render :partial => "/google_analytics"
