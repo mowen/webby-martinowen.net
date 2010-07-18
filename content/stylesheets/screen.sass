@@ -121,14 +121,16 @@ body.bp
   #front-page, #lifestream
     .post-box, .last-post-box
       overflow: hidden
-      a
-        +header-font-style
-        border-bottom: none
+    a
+      +header-font-style
+      border-bottom: none
   #front-page
     .post-box
       +column($blueprint_grid_columns / 4)
     .last-post-box
       +column($blueprint_grid_columns / 4, true)
+    #pager_links
+      text-align: right
   #lifestream
     .post-box
       +column($blueprint_grid_columns / 5)
