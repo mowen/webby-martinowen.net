@@ -4,40 +4,51 @@ extension: css
 layout: nil
 ---
 // This import applies a global reset to any page that imports this stylesheet.
+
 @import blueprint/reset.sass
 
-!blueprint_font_family = "Georgia"
-!blueprint_fixed_font_family = "Monaco", "Courier New", "Courier"
-!header_font = "Helvetica Neue", "Helvetica", "Arial"
-!blueprint_font_size = 14px
+$blueprint_font_family: Georgia
 
-!font_color= lighten(#000, 20)
+$blueprint_fixed_font_family: Monaco, unquote("Courier New"), Courier
+
+$header_font: unquote("Helvetica Neue"), Helvetica, Arial
+
+$blueprint_font_size: 14px
+
+$font_color: lighten(black, 20)
 
 // Import all the default blueprint modules so that we can access their mixins.
+
 @import blueprint
+
 // Import the non-default scaffolding module.
+
 @import blueprint/modules/scaffolding.sass
 
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+
 // +blueprint
 
 //Recommended Blueprint configuration with scoping and semantic layout:
-+blueprint-typography("body.bp")
-+blueprint-scaffolding("body.bp")
+
++blueprint-typography(unquote("body.bp"))
+
++blueprint-scaffolding(unquote("body.bp"))
 
 // To configure blueprint, edit the partials/base.sass file.
+
 @import partials/base.sass
 
 .container
   +container
 
 #header, #footer
-  +column(!blueprint_grid_columns)
+  +column($blueprint_grid_columns)
 
 #sidebar
-  !sidebar_columns = 7
+  $sidebar_columns: 7
   // true means it's the last column in the row
-  +column(!sidebar_columns, true)
+  +column($sidebar_columns, true)
   ul.posts, ul.social-network-links
     margin-left: 0px
     +no-bullets
@@ -53,12 +64,12 @@ layout: nil
   a
     text-decoration: none
     border: none
-    color= !font_color
+    color: $font_color
     +header-font-style
   #nav-bar
-    :font-size 1.5em
-    :line-height 1
-    :margin-bottom 1em
+    font-size: 1.5em
+    line-height: 1
+    margin-bottom: 1em
     ul
       width: 100%
       margin-left: 0px
@@ -73,9 +84,9 @@ body.bp
   +blueprint-interaction
   //+showgrid("grid.png")
   a
-    +link-colors( !link_color, !link_hover_color, !link_active_color, !link_visited_color, !link_focus_color )
+    +link-colors($link_color, $link_hover_color, $link_active_color, $link_visited_color, $link_focus_color)
     text-decoration: none
-    border-bottom: 1px dotted #666
+    border-bottom: 1px dotted #666666
   +include_link_icons
   +include_social_icons
   h1, h2, h3, h4, h5, h6
@@ -90,11 +101,11 @@ body.bp
       +header-font-style
       border-bottom: none
   pre, code
-    font-family= !blueprint_fixed_font_family
+    font-family: $blueprint_fixed_font_family
   pre
     display: block
     color: white
-    background: #222
+    background: #222222
     padding-left: 0.6em
     padding-right: 0.6em
     +border-radius(5px)
@@ -115,14 +126,14 @@ body.bp
         border-bottom: none
   #front-page
     .post-box
-      +column( !blueprint_grid_columns / 4)
+      +column($blueprint_grid_columns / 4)
     .last-post-box
-      +column( !blueprint_grid_columns / 4, true)
+      +column($blueprint_grid_columns / 4, true)
   #lifestream
     .post-box
-      +column( !blueprint_grid_columns / 5)
+      +column($blueprint_grid_columns / 5)
     .last-post-box
-      +column( !blueprint_grid_columns / 5, true)
+      +column($blueprint_grid_columns / 5, true)
   #main
     .post
       h2
