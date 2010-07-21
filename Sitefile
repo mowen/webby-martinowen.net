@@ -2,7 +2,10 @@ require 'compass'
 require 'compass-colors'
 
 HTTP_BASE = 'http://martinowen.net'
-# HTTP_BASE = 'http://localhost/martinowen'
+#HTTP_BASE = 'file:///' + File.join(File.dirname(__FILE__), 'output')
+#HTTP_BASE = 'http://localhost/martinowen'
+
+SITE.hide_drafts = true
 
 Compass.configuration do |config|
   config.project_path = File.dirname(__FILE__)

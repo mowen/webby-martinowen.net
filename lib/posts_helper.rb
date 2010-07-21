@@ -1,7 +1,6 @@
 module PostsHelper
 
   BLOG_POST_LIMIT = 10
-  HIDE_UNPUBLISHED = true
 
   def find_posts(limit=BLOG_POST_LIMIT)
     options = { :in_directory => 'blog', 
@@ -9,7 +8,7 @@ module PostsHelper
                 :sort_by => "created_at",
                 :reverse => true,
                 :blog_post => true }
-    options[:draft] = nil if HIDE_UNPUBLISHED
+    options[:draft] = nil if SITE.hide_drafts
     ::Webby::Resources.pages.find(limit, options)
   end
 
