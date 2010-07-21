@@ -1,0 +1,38 @@
+--- 
+title: A Git Kata
+created_at: 2010-07-21 20:49:05.675000 +01:00
+summary: A 'kata' for learning and practicing your usage of Git.
+blog_post: true
+draft: true
+filter:
+  - textile
+--- 
+h2. A hands-on approach to learning Git
+
+Although there are some excellent resources on the web for learning Git I wrote the following kata to cover all of the topics that I've needed so far in a safe sandbox environment (your desktop). People learning Git might not realise that there is no reason why they can't set up a remote on their desktop and have multiple clones pushing to it.
+
+h2. A Git Kata
+
+h3. Setting things up
+
+To do this kata, we need to an origin repo, and two cloned repos that will push and pull on it.
+
+# Create a folder called 'GitKata' on your desktop, and in your Git shell, @cd@ to it.
+# Init or clone a Git repo (any repo - the contents and history don't matter, and it can be read-only).
+# Rename that folder @origin@, and delete its 'origin' remote. Also cd to the renamed folder and checkout a new branch, the name can be anything. _This is because we are going to push to the master, and we can't do that if it is currently checked out. We could also have used a 'bare' repository, which is just a directory containing .git directory and no working copy files._ *Add the @--bare@ switch when cloning instead* 
+# Staying on your desktop, clone the new repo. Prefix the location of your existing repo with @file:///@. So on Windows it would be @file:///c:/Users/<your username>/Desktop/GitKata/origin@.
+# Call your clone @jack@.
+# Clone your @origin@ repo one more time, and this time call it @jill@.
+
+If you want to do this kata again, or you'd like to have a save point, you might want to copy the GitKata folder away somewhere.
+
+h3. Getting started
+
+# cd to @jack@ and make some changes to a file or files in the directory. It doesn't matter which files. 
+# Stage and commit your changes to @jack@. Push those changes to @origin@.
+# cd to @jill@ and make some changes to some *different* files. Make sure they are different!
+# Stage and commit your changes to @jill@. Try to push those changes to @origin@. _Don't be alarmed when your push is rejected._
+
+*It went wrong here when I did @git pull origin master@ followed by @git push origin master@ and it automatically merged jill and jack.*
+
+# Rebase your @jill@ changes onto @origin/master@.
