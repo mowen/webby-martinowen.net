@@ -18,11 +18,19 @@ h3. Setting things up
 To do this kata, we need to an origin repo, and two cloned repos that will push and pull on it.
 
 # Create a folder called 'GitKata' on your desktop, and in your Git shell, @cd@ to it.
-# Init or clone a Git repo (any repo - the contents and history don't matter, and it can be read-only).
-# Rename that folder @origin@, and delete its 'origin' remote. Also cd to the renamed folder and checkout a new branch, the name can be anything. _This is because we are going to push to the master, and we can't do that if it is currently checked out. We could also have used a 'bare' repository, which is just a directory containing .git directory and no working copy files._ *Add the @--bare@ switch when cloning instead* 
+# Init or clone a Git repo (any repo - the contents and history don't matter, and it can be read-only) with the @--bare@ command line switch. _@--bare@ is important as this is going to be our origin and shouldn't contain any working copy files. If it did contain any then we wouldn't be able to push, as such an operation could potentially overwrite local changes._
+
+<pre>cd GitKata
+git clone http://github.com/mowen/js-unit-testing.git --bare
+</pre>
+
 # Staying on your desktop, clone the new repo. Prefix the location of your existing repo with @file:///@. So on Windows it would be @file:///c:/Users/<your username>/Desktop/GitKata/origin@.
 # Call your clone @jack@.
 # Clone your @origin@ repo one more time, and this time call it @jill@.
+
+<pre>git clone js-unit-testing.git Jack
+git clone js-unit-testing.git Jill
+</pre>
 
 If you want to do this kata again, or you'd like to have a save point, you might want to copy the GitKata folder away somewhere.
 
@@ -30,8 +38,19 @@ h3. Getting started
 
 # cd to @jack@ and make some changes to a file or files in the directory. It doesn't matter which files. 
 # Stage and commit your changes to @jack@. Push those changes to @origin@.
+
+<pre>git add change.txt
+git commit -m "Minor change."
+git push origin master
+</pre>
+
 # cd to @jill@ and make some changes to some *different* files. Make sure they are different!
 # Stage and commit your changes to @jill@. Try to push those changes to @origin@. _Don't be alarmed when your push is rejected._
+
+<pre>git add different_change.txt
+git commit -m "A different minor change."
+git push origin master
+</pre>
 
 *It went wrong here when I did @git pull origin master@ followed by @git push origin master@ and it automatically merged jill and jack.*
 
