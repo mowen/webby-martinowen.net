@@ -25,10 +25,6 @@ $font_color: lighten(black, 20)
 
 @import "blueprint/scaffolding"
 
-// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
-
-// +blueprint
-
 //Recommended Blueprint configuration with scoping and semantic layout:
 
 +blueprint-scaffolding(unquote("body.bp"))
@@ -48,6 +44,7 @@ $font_color: lighten(black, 20)
   // true means it's the last column in the row
   +column($sidebar_columns, true)
   ul.posts, ul.social-network-links
+    padding-left: 0px
     margin-left: 0px
     +no-bullets
   a
@@ -70,6 +67,7 @@ $font_color: lighten(black, 20)
     margin-bottom: 1em
     ul
       width: 100%
+      padding-left: 0px
       margin-left: 0px
       +no-bullets
       li
