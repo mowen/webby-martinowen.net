@@ -5,7 +5,7 @@ layout: nil
 ---
 // This import applies a global reset to any page that imports this stylesheet.
 
-@import blueprint/reset.sass
+@import "blueprint/reset"
 
 $blueprint_font_family: Georgia
 
@@ -19,11 +19,11 @@ $font_color: lighten(black, 20)
 
 // Import all the default blueprint modules so that we can access their mixins.
 
-@import blueprint
+@import "blueprint"
 
 // Import the non-default scaffolding module.
 
-@import blueprint/modules/scaffolding.sass
+@import "blueprint/scaffolding"
 
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
 
@@ -31,13 +31,11 @@ $font_color: lighten(black, 20)
 
 //Recommended Blueprint configuration with scoping and semantic layout:
 
-+blueprint-typography(unquote("body.bp"))
-
 +blueprint-scaffolding(unquote("body.bp"))
 
 // To configure blueprint, edit the partials/base.sass file.
 
-@import partials/base.sass
+@import "partials/base"
 
 .container
   +container
@@ -79,6 +77,7 @@ $font_color: lighten(black, 20)
         margin-right: 50px
 
 body.bp
+  +blueprint-typography(true)
   +blueprint-utilities
   +blueprint-debug
   +blueprint-interaction

@@ -14,15 +14,15 @@ $blueprint_grid_margin: 10px
 
 $blueprint_grid_width: ($blueprint_container_size + $blueprint_grid_margin) / $blueprint_grid_columns - $blueprint_grid_margin
 
-@import blueprint/modules/link_icons.sass
+@import "blueprint/link-icons"
 
-@import compass/utilities/links.sass
+@import "compass/utilities/links"
 
-@import compass/utilities/lists/bullets.sass
+@import "compass/utilities/lists/bullets"
 
-@import theme.sass
+@import "theme"
 
-@import border-radius.sass
+@import "border-radius"
 
 =header-font-style($bold: true)
   font-family: $header_font

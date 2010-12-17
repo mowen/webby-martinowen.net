@@ -1,5 +1,4 @@
 require 'compass'
-require 'compass-colors'
 
 HTTP_BASE = 'http://martinowen.net'
 #HTTP_BASE = 'file:///' + File.join(File.dirname(__FILE__), 'output')
