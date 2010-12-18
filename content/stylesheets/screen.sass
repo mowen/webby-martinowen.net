@@ -115,24 +115,22 @@ body.bp
       +border-radius(0.2em)
   img
     border: 2px solid #e0e0e0
-  #front-page, #lifestream
-    .post-box, .last-post-box
-      overflow: hidden
+  .solution
+    display: none
+    pre
+      margin-top: 0px
+  #front-page
     a
       +header-font-style
       border-bottom: none
-  #front-page
+    .post-box, .last-post-box
+      overflow: hidden
     .post-box
       +column($blueprint_grid_columns / 4)
     .last-post-box
       +column($blueprint_grid_columns / 4, true)
     #pager_links
       text-align: right
-  #lifestream
-    .post-box
-      +column($blueprint_grid_columns / 5)
-    .last-post-box
-      +column($blueprint_grid_columns / 5, true)
   #main
     .post
       h2

@@ -2,17 +2,17 @@
     var showSolution = function() {
 	var p = $(this); 
 	p.find('a').text('Hide Solution');
-	p.next('.solution').slideDown();
+	p.next('.solution').slideDown('fast');
     };
 
     var hideSolution = function() {
 	var p = $(this); 
 	p.find('a').text('Show Solution');
-	p.next('.solution').slideUp();
+	p.next('.solution').slideUp('fast');
     };
 
     $(document).ready(function() {
-	$('.solution').hide()
+	$('.solution')
 	    .each(function() {
 		$("<p><a>Show Solution</a></p>")
 		    .insertBefore(this)
