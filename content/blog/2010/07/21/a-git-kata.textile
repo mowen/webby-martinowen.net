@@ -3,6 +3,7 @@ title: Git Katas
 created_at: 2010-07-21 20:49:05.675000 +01:00
 summary: A list of 'katas' for learning and practicing usage of the Git distributed version control system.
 blog_post: true
+post_css_class: git-kata
 filter:
   - textile
 --- 

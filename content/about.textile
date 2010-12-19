@@ -6,14 +6,19 @@ filter: textile
 ---
 h2. A Word of Introduction
 
-I'm a software developer living in Liverpool in the United Kingdom.
+I'm a software developer living in Liverpool in the United Kingdom. I work for "Qire":http://qire.co.uk/.
 
-I'm interested in the following things:
+Some of the many things I'm interested in are:
 
-* Ruby
 * JavaScript
+* C#/.NET
+* Ruby
+* MongoDB
+* Dependency Injection
+* Unit Testing
+* Test Driven Development
+* Behaviour Driven Development
 * Emacs
-* .NET
 * Lisp (particularly Clojure)
 * Erlang
 * Arduino

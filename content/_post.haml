@@ -2,7 +2,8 @@
 filter: haml
 ---
 - page = @page if @page.blog_post
-.post
+- post_css_class = @page.post_css_class if @page.post_css_class  
+%div{ :class => [ "post", post_css_class ] }
   %h2.summary
     = @page.summary
   %p.post-date
