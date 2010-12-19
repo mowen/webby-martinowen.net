@@ -2,13 +2,13 @@
     var showSolution = function() {
 	var p = $(this); 
 	p.find('a').text('Hide Solution');
-	p.next('.solution').slideDown('fast');
+	p.next('.solution').slideDown();
     };
 
     var hideSolution = function() {
 	var p = $(this); 
 	p.find('a').text('Show Solution');
-	p.next('.solution').slideUp('fast');
+	p.next('.solution').slideUp();
     };
 
     $(document).ready(function() {
