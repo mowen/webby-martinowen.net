@@ -18,7 +18,8 @@ I don't consider myself to be a Git expert, and in writing this I hope to see wh
 h2. List of Katas
 
 * "Kata 0 - Setting things up":#setting-up
-** "Kata 0.1 - Create a clone of a repository":#cloning
+** "Kata 0.1 - Create your origin":#create-origin
+** "Kata 0.2 - Create a clone of a repository":#cloning
 * "Kata 1 - Committing":#committing
 ** "Kata 1.1 - Stage changes to the index":#stage
 ** "Kata 1.2 - Unstage changes (optional)":#unstage
@@ -36,7 +37,7 @@ h3(#setting-up). Kata 0 - Setting things up
 
 In order to do this kata, we need an origin repo (which will be our 'remote') and two cloned repos that will push and pull on it.
 
-h4. Create your origin
+h4(#create-origin). 0.1 Create your origin
 
 Create a folder called 'gitkata' on your desktop, and change directory to it in a shell.
 
@@ -48,14 +49,14 @@ _The @--bare@ switch is important as this is going to be our origin and shouldn'
 git clone http://github.com/mowen/js-unit-testing.git --bare
 </pre>
 
-h4(#cloning). Create a clone of a repository
+h4(#cloning). 0.1 Create a clone of a repository
 
 Staying in the gitkata folder, clone the new repo. Call your clone @jack@:
 
 <pre>git clone js-unit-testing.git jack
 </pre>
 
-h4. Create another clone
+h4. 0.2 Create another clone
 
 Clone your @origin@ repo one more time, and this time call it @jill@.
 
