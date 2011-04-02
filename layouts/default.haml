@@ -34,13 +34,13 @@ filter:
     -# %link{ :href => "/images/apple-touch-icon.png", :rel => "apple-touch-icon" }/
     
     -# CSS: implied media="all"
-    %link{ :href => "css/style.css?v=1", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "/css/style.css?v=1", :media => "all", :rel => "stylesheet" }/
     
     -# Uncomment if you are specifically targeting less enabled mobile browsers
     -# %link{ :href => "css/handheld.css?v=1", :media => "handheld", :rel => "stylesheet" }/
     
     -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
-    %script{ :src => "js/modernizr.min.js" }
+    %script{ :src => "/js/modernizr.min.js" }
 
     = render :partial => "/default_includes"
     
@@ -50,6 +50,8 @@ filter:
         = render :partial => "/header"
       #main
         = render :partial => "/content"
+      #sidebar
+        = render :partial => "/sidebar"
       #footer
         = render :partial => "/footer"
       
@@ -60,11 +62,11 @@ filter:
     :javascript
       !window.jQuery && document.write(unescape('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))
     
-    %script{ :src => "js/plugins.js?v=1" }
-    %script{ :src => "js/script.js?v=1" }
+    %script{ :src => "/js/plugins.js?v=1" }
+    %script{ :src => "/js/script.js?v=1" }
     
     /[if lt IE 7 ]
-      %script{ :src => "js/dd_belatedpng.js" }
+      %script{ :src => "/js/dd_belatedpng.js" }
       :javascript
         //DD_belatedPNG.fix('img, .png_bg');
         
