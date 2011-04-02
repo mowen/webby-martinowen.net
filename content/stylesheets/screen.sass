@@ -60,7 +60,7 @@ $font_color: lighten(black, 20)
     text-decoration: none
     border: none
     color: $font_color
-    text-shadow: 2px 2px 2px lighten($link_color, 15)
+    text-shadow: 0.05em 0.05em 0.1em lighten(#000, 50)
     +header-font-style
   #nav-bar
     font-size: 1.5em
@@ -78,8 +78,8 @@ $font_color: lighten(black, 20)
 body.bp
   +blueprint-typography(true)
   +blueprint-utilities
-  +blueprint-debug
   +blueprint-interaction
+  //+blueprint-debug
   //+showgrid("grid.png")
   a
     +link-colors($link_color, $link_hover_color, $link_active_color, $link_visited_color, $link_focus_color)
@@ -88,6 +88,7 @@ body.bp
   +include_link_icons
   +include_social_icons
   h1, h2, h3, h4, h5, h6
+    text-shadow: 0.05em 0.05em 0.1em lighten(#000, 50)
     +header-font-style
   .post-date
     +header-font-style(false)
