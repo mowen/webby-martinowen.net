@@ -13,7 +13,7 @@ $blueprint_fixed_font_family: unquote("Inconsolata"), Monaco, unquote("Courier N
 
 $header_font: unquote("Helvetica Neue"), Helvetica, Arial
 
-$blueprint_font_size: 16px
+$blueprint_font_size: 14px
 
 $font_color: lighten(black, 20)
 
@@ -60,7 +60,7 @@ $font_color: lighten(black, 20)
     text-decoration: none
     border: none
     color: $font_color
-    text-shadow: 0.5px 0.5px 1px lighten(#000, 50)
+    text-shadow: 2px 2px 3px lighten(#000, 50)
     +header-font-style
   #nav-bar
     font-size: 1.5em
@@ -88,7 +88,7 @@ body.bp
   +include_link_icons
   +include_social_icons
   h1, h2, h3, h4, h5, h6
-    text-shadow: 0.5px 0.5px 1px lighten(#000, 50)
+    text-shadow: 2px 2px 3px lighten(#000, 50)
     +header-font-style
   .post-date
     +header-font-style(false)
@@ -116,6 +116,7 @@ body.bp
       padding-left: 0.2em
       padding-right: 0.2em
       +border-radius(0.2em)
+      +box-shadow(#333, 1px, 1px, 2px)
   img
     border: 2px solid #e0e0e0
   .solution
