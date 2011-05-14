@@ -1,0 +1,40 @@
+--- 
+title: Using FuncUnit with Sauce Labs
+summary: How to use the FuncUnit web application testing framework with cloud service Sauce Labs
+created_at: 2011-05-14 15:54:14.961000 +01:00
+blog_post:  true
+draft: true
+filter:
+  - erb
+  - textile
+--- 
+
+p. In work we've recently started using the "FuncUnit":http://funcunit.com/ automated web application testing framework. It is built on top of Selenium, but adds a lot of value as it uses jQuery's selector syntax, this is much easier to work with than Selenium RC's XPath selectors.
+
+p. FuncUnit also provides many helper functions for waiting until elements exist on the page. This is invaluable if you are doing a lot of DOM manipulation, which we were.
+
+p. Something we wanted to do with our functional testing was run the tests in different browser environments using "Sauce Labs":http://saucelabs.com/, a cloud-based cross-browser testing service, as this would save us from having to install older versions of various browsers. I wasn't sure if this was going to be possible, but with "some advice from Brian Moschel":http://forum.javascriptmvc.com/#topic/32525000000389015 I was able to get it working.
+
+<notextile>
+<% uv :lang => "javascript" do %>FuncUnit = {
+    browsers: [
+        JSON.stringify({ 
+            username: "<your Sauce Labs username>", 
+            "access-key": "<your Sauce Labs Api Key>",
+            os: "Windows 2003",
+            browser: "firefox",
+            browser-version: "3.6.",
+            name: "My Tests",
+            "user-extensions-url": "http://<your server>/funcunit/java/user-extensions.js"
+        })
+    ],
+   
+    serverHost: 'ondemand.saucelabs.com',
+    serverPort: 80,
+    
+    jmvcRoot: 'http://<your server>/'
+};
+<% end %>
+</notextile>         
+
+p. As long as you open your pages in your tests using @S.open('//index.html')@ the jmvcRoot will be applied and you will be able to test locally as well as on your server with Sauce Labs.
