@@ -325,7 +325,24 @@ FileETag None
 #   RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
 # </IfModule>
 
+# ----------------------------------------------------------------------
+# Hide the .html extension
+# ----------------------------------------------------------------------
 
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html
+</IfModule>
+
+# ----------------------------------------------------------------------
+# FeedBurner
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} !FeedBurner
+  RewriteRule ^blog/atom\.xml$ http://feeds.feedburner.com/MartinOwen [R,L]
+</IfModule>
 
 # ----------------------------------------------------------------------
 # Prevent SSL cert warnings
@@ -414,7 +431,3 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 # information about setting PHP directives.
 
 # php_flag register_globals Off
-
-
-
-
