@@ -45,13 +45,13 @@ filter:
     
   %body.bp{ :lang => "en" }
     .container
-      #header
+      %header
         = render :partial => "/header"
-      #main
+      %section#main
         = render :partial => "/content"
-      #sidebar
+      %nav#sidebar
         = render :partial => "/social_network_links"
-      #footer
+      %footer
         = render :partial => "/footer"
       
     -# 

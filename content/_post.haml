@@ -3,10 +3,10 @@ filter: haml
 ---
 - page = @page if @page.blog_post
 - post_css_class = @page.post_css_class if @page.post_css_class  
-%div{ :class => [ "post", post_css_class ] }
+%article{ :class => [ "post", post_css_class ] }
   %h2.summary
     = @page.summary
-  %p.post-date
+  %time.post-date{ :datetime => page.created_at.iso8601, :pubdate => :pubdate }
     = format_post_date_long(page.created_at)
   %hr
   ~@page.blog_post ? @content : render(page)

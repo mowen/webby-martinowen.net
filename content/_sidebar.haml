@@ -6,11 +6,11 @@ filter: haml
 %p
   %a.atom-feed{ :href => "/blog/atom.xml", :title => "Atom feed for martinowen.net", :rel => "alternate", :type => "application/atom+xml" }
     Atom Feed
-%ul.posts
-  - posts = find_posts(10)
-  - posts.each do |post|
-    %li
-      %span.post-date
-        = format_post_date_short(post.created_at)
-      %br
-      = link_to_page(post)
+  %ul.posts
+    - posts = find_posts(10)
+    - posts.each do |post|
+      %li
+        %time.post-date{ :datetime => post.created_at.iso8601 }
+          = format_post_date_short(post.created_at)
+        %br
+          = link_to_page(post)
